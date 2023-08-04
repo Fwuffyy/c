@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="page.css">
+        <link rel="stylesheet" href="message.css">
+        <title>Switch Bot</title>
+    </head>
+    <body>
+        <template id="message-block">
+            <div class="message-block">
+                <img class="pfp" src="https://cdn.discordapp.com/avatars/735316424725102672/a_9ddd42ed3d63d6fbc983eee025912c09.gif">
+                <div class="content">
+                    <div class="block-head">
+                        <span class="username"></span>
+                        <span class="timestamp" data-timestamp></span>
+                    </div>
+                    <div class="messages"></div>
+                </div>
+            </div>
+        </template>
+        <main>
+            <div id="chat-history"></div>
+            <div id="typing-indicator">
+                <div class="typing-animation">
+                    <div class="typing-orb"></div>
+                    <div class="typing-orb"></div>
+                    <div class="typing-orb"></div>
+                </div>
+                <div id="typing-text">
+                    <span id="typing-username"></span>
+                    <span>typing...</span>
+                </div>
+            </div>
+            <div class="controls">
+                <input id="chat-box" placeholder="Message...">
+                <button id="send">Send</button>
+            </div>
+        </main>
+        <script src="./dist/bundle.js"></script>
+    </body>
+</html>
